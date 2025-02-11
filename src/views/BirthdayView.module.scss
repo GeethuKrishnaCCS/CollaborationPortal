@@ -1,0 +1,25 @@
+.one-column {
+  display: flex;
+  flex-direction: column;
+  color:red;
+}
+
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  color: blue;
+}
+
+.two-columns .column {
+  flex: 1 1 50%;
+}
+
+.three-columns {
+  display: flex;
+  flex-wrap: wrap;
+  color: green;
+}
+
+.three-columns .column {
+  flex: 1 1 33.33%;
+}

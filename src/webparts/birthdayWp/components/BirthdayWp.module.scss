@@ -1,0 +1,81 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.birthdayWp {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1em;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1em;
+}
+.column {
+  flex: 1;
+  padding: 0 1em;
+}
+.title {
+  margin: 0;
+  color: "[theme:neutralPrimary, default: #333333]";
+  color: var(--neutralPrimary);
+}
+.subTitle {
+  margin: 0;
+  color: "[theme:neutralSecondary, default: #999999]";
+  color: var(--neutralSecondary);
+}
+.one-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.two-columns .column {
+  flex: 1 1 50%;
+}
+
+.three-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.three-columns .column {
+  flex: 1 1 33.33%;
+}

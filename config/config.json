@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "birthday-wp-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/birthdayWp/BirthdayWpWebPart.js",
+          "manifest": "./src/webparts/birthdayWp/BirthdayWpWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BirthdayWpWebPartStrings": "lib/webparts/birthdayWp/loc/{locale}.js"
+  }
+}
