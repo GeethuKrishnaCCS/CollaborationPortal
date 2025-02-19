@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "collaboration-events-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationEvents/CollaborationEventsWebPart.js",
+          "manifest": "./src/webparts/collaborationEvents/CollaborationEventsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CollaborationEventsWebPartStrings": "lib/webparts/collaborationEvents/loc/{locale}.js"
+  }
+}
