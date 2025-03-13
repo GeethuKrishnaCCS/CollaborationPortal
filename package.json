@@ -21,6 +21,8 @@
     "@microsoft/sp-webpart-base": "1.20.0",
     "@pnp/logging": "^3.24.0",
     "@pnp/sp": "^3.24.0",
+    "@pnp/spfx-property-controls": "^3.19.0",
+    "linq": "^4.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "tslib": "2.3.1"

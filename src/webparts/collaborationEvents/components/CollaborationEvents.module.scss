@@ -5,6 +5,7 @@
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
   color: var(--bodyText);
+
   &.teams {
     font-family: $ms-font-family-fallbacks;
   }
@@ -12,6 +13,7 @@
 
 .welcome {
   text-align: center;
+  font-family: math;
 }
 
 .welcomeImage {
@@ -31,4 +33,466 @@
       color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
     }
   }
+}
+
+// .maindiv {
+//   background: #001F3F;
+//   font-family: "Poppins", sans-serif;
+//   font-style: normal;
+//   // width: 100%;
+//   max-width: 1440px;
+//   height: 100%;
+//   margin: 0 auto;
+//   padding-bottom: 84px;
+//   border-radius: 7px;
+//   position: relative;
+//   padding: 0 32px 32px;
+// }
+
+.layout {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+}
+
+// .cardgrid {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 24px;
+// }
+
+.inputcontrol {
+  width: 100%;
+}
+
+.cardgrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Adds space between controls */
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+}
+
+
+.inputgroup {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+.mtchk {
+  margin-top: 2.5em;
+}
+
+.btndiv {
+  display: flex;
+  justify-content: flex-end;
+  margin: 21px;
+  gap: 10px;
+  margin-right: 5px;
+}
+
+.icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+}
+
+//pop up//
+
+.root {
+  background: rgba(0, 0, 0, 0.2);
+  bottom: 0%;
+  left: 0%;
+  position: fixed;
+  right: 0%;
+  top: 0%;
+}
+
+.content {
+  background: #fff;
+  left: 50%;
+  max-width: 400px;
+  padding: 2em 3em 3em;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px
+}
+
+
+
+.buttongroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 5px;
+}
+
+.toprightbutton {
+  display: flex;
+  // justify-content: flex-end;
+  padding: 10px;
+}
+
+//pop up end//
+
+//FilmStrip Layout//
+
+
+
+
+
+
+
+/* Card Content */
+
+
+.fa-heart {
+  color: #e91e63;
+}
+
+/* Empty State */
+.nobirthday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #999;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .BirthdaySlider {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 items per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .BirthdaySlider {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 items per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .BirthdaySlider {
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 item per row on extra small screens */
+  }
+}
+
+
+//COMPACT LAYOUT//
+
+.CompactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); // Auto adjusts based on screen width
+  gap: 20px;
+  padding: 20px;
+  background-color: #e3f2fd;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.CompactCard {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 350px; // Increased to match the first image’s layout
+  box-sizing: border-box;
+  height: auto;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.cardImageCompact {
+  flex-shrink: 0;
+  width: 75px; // Adjusted to match the first image
+  height: 75px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 10px;
+  }
+}
+
+.cardDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+
+  .cardRole {
+    font-size: 14px;
+    color: #1e88e5;
+    margin: 4px 0;
+  }
+
+  .cardDate {
+    font-size: 12px;
+    color: #666;
+  }
+}
+
+.noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  color: #999;
+  font-size: 16px;
+}
+
+//COMPACT LAYOUT CLOSED//
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+
+//CARD GRID LAYOUT//
+.CardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.Card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.cardDateContainer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.cardMonth {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+.cardDay {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+
+.cardImageContainer {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+// Circle style
+.circleImageCard {
+  width: 210px;
+  height: 200px;
+  border-radius: 50%;
+  // margin-right: 15px;
+}
+
+// Square style
+.squareImageCard {
+  width: 100%;
+  height: 96%;
+  // border-radius: 8px; // Optional slight rounding
+  // margin-right: 15px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+
+// Rectangle style
+.rectangleImageCard {
+  width: 75%;
+  height: 100%;
+  // border-radius: 8px;
+  // margin-right: 15px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardDetails {
+  padding: 15px;
+  text-align: center;
+}
+
+.cardRole {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+.cardDate {
+  font-size: 14px;
+  color: #777;
+}
+
+.cardLocation {
+  color: #00aaff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cardIcons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.cardIcons i {
+  font-size: 18px;
+  color: #00aaff;
+  cursor: pointer;
+}
+
+//CARD LAYOUT//
+
+.listContainer {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.listItems {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardImageContainerList {
+  flex-shrink: 0;
+  width: 90px;
+  height: 100px;
+  //border-radius: 50%;  for circular image
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.circleImage {
+  flex-shrink: 0;
+  width: 90px;
+  height: 88px;
+  border-radius: 88%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+// Square image style
+.squareImage {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  margin-right: 15px;
+  border-radius: 8px; // Optional: Slightly rounded corners
+}
+
+// Rectangle image style
+.rectangleImage {
+  flex-shrink: 0;
+  width: 120px;
+  height: 80px;
+  overflow: hidden;
+  margin-right: 15px;
+  border-radius: 8px; // Optional: Slightly rounded corners
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.birthday {
+  font-size: 14px;
+  color: gray;
+  margin: 0;
 }

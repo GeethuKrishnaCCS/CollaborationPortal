@@ -13,6 +13,7 @@
   },
   "externals": {},
   "localizedResources": {
-    "CollaborationEventsWebPartStrings": "lib/webparts/collaborationEvents/loc/{locale}.js"
+    "CollaborationEventsWebPartStrings": "lib/webparts/collaborationEvents/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

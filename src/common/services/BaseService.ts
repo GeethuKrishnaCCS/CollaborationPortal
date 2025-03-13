@@ -15,6 +15,9 @@ export class BaseService implements IBaseService {
     constructor(context: WebPartContext, siteUrl?: string) {
         this.sp = siteUrl ? new SPFI(siteUrl).using(SPFx(context)) : getSP(context);
     }
+    getChoiceListItems(url: string, field: string): Promise<any> {
+        throw new Error("Method not implemented.");
+    }
 
     public getCurrentUser() {
         return this.sp.web.currentUser();
@@ -166,8 +169,11 @@ export class BaseService implements IBaseService {
         return this.sp.web.getList(queryurl).items.getById(id).select("FileRef,FileLeafRef")()
     }
 
-    public getChoiceListItems(url: string, field: string): Promise<any> {
-        return this.sp.web.getList(url).fields.getByInternalNameOrTitle(field)();
-    }
+    // public getChoiceListItems(url: string, field: string): Promise<any> {
+    //     return this.sp.web.getList(url).fields.getByInternalNameOrTitle(field)();
+    // }
+
+
+
 
 }

@@ -1,0 +1,231 @@
+.StackStyle {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto;
+    /* Allows horizontal scrolling if needed */
+    background-color: rgb(255, 255, 255);
+}
+
+/* Inner Container with Consistent Sizing */
+// .StackStyleContainer {
+//   display: flex;
+//   flex-wrap: wrap;
+//   max-width: 1200px;
+//   gap: 16px;
+//   justify-content: center;
+// }
+.StackStyleContainer {
+    background-color: #E0F4F5;
+    /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.BirthdaySlider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards on medium screens */
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cards on large screens */
+    }
+
+    @media (min-width: 1440px) {
+        grid-template-columns: repeat(3, 1fr);
+        /* Maintain 3 cards on extra large screens */
+    }
+}
+
+
+/* Individual Card Styles */
+.FilmstripCard {
+    min-width: 200px;
+    max-width: 250px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.FilmstripCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image and Date Styles */
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// Default profile image
+.profileImage {
+    object-fit: cover;
+}
+
+.date {
+    position: absolute;
+    bottom: 15px;
+    /* Move to the bottom */
+    left: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: medium;
+}
+
+
+.mailButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6C7A89;
+    font-size: 18px;
+}
+
+.searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6C7A89;
+    font-size: 18px;
+}
+
+
+// Circle style
+
+
+
+.circleImageCard {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.Circledate {
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+// Square style
+.squareImageCard {
+    width: 100%;
+    height: 96%;
+    // border-radius: 8px; // Optional slight rounding
+    // margin-right: 15px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+// Rectangle style
+.rectangleImageCard {
+    width: 75%;
+    height: 100%;
+    // border-radius: 8px;
+    // margin-right: 15px;
+}
+
+
+/* Action Buttons */
+.actionButtons {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding: 8px 12px;
+}
+
+.rsvpButton,
+.likeButton {
+    height: 22px;
+    width: 63px;
+}
+
+.rsvpButton:hover,
+.likeButton:hover {
+    background-color: #c8e6c9;
+}
+
+.commentIcon {
+    height: 20px;
+    width: 19px;
+}
+
+.mailIcon {
+    height: 16px;
+    width: 23px;
+    margin-top: 1.5%;
+}
+
+.likeIcon {
+    height: 19px;
+    width: 22px;
+}
+
+
+.cardContent {
+    padding: 12px;
+
+}
+
+.category {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #1e88e5;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 0;
+    color: #333;
+    display: -webkit-box;
+    // -webkit-line-clamp: 2;
+    /* Allows max 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    max-height: 3.2em;
+    /* Adjust based on font-size */
+}
+
+.dateTime,
+.location {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+}

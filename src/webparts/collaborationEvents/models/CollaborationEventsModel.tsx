@@ -30,15 +30,21 @@ export default class CollaborationEventModel extends React.Component<ICollaborat
   public render(): React.ReactElement<ICollaborationEventsProps> {
     return (
       <>
-        {this.state.userData.mail !== "" && <CollaborationEvents
-          description={this.props.description}
-          isDarkTheme={this.props.isDarkTheme}
-          environmentMessage={this.props.environmentMessage}
-          hasTeamsContext={this.props.hasTeamsContext}
-          userData={this.state.userData}
-          fetchGroupData={this.fetchGroupData}
-          context={this.props.context}
-        ></CollaborationEvents>}
+        {this.state.userData.mail !== "" &&
+          <CollaborationEvents
+            description={this.props.description}
+            isDarkTheme={this.props.isDarkTheme}
+            environmentMessage={this.props.environmentMessage}
+            hasTeamsContext={this.props.hasTeamsContext}
+            userData={this.state.userData}
+            fetchGroupData={this.fetchGroupData}
+            context={this.props.context}
+            Cardlayout={this.props.Cardlayout}
+            dataSource={this.props.dataSource}
+            StylesForCards={this.props.StylesForCards}
+            StylesForImages={this.props.StylesForImages} Events={this.props.Events} SharePointLists={this.props.SharePointLists} location={this.props.location} headingfontcolor={this.props.headingfontcolor}
+            Field={this.props.Field}        >
+          </CollaborationEvents>}
       </>
     );
   }
