@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "product-development-client-side-solution",
+    "id": "264ceecc-0b00-49dd-a31a-3f595c31bbee",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.ReadBasic.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementApps.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementApps.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementConfiguration.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementConfiguration.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementManagedDevices.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementManagedDevices.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementServiceConfig.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "DeviceManagementServiceConfig.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Directory.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Directory.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.ReadWrite"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.ReadWrite.All"
+      }
+    ],
+    "metadata": {
+      "shortDescription": {
+        "default": "ProductDevelopment description"
+      },
+      "longDescription": {
+        "default": "ProductDevelopment description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "product-development Feature",
+        "description": "The feature that activates elements of the product-development solution.",
+        "id": "7ad67f4d-5f72-4b89-8704-96a8f5351ffc",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/product-development.sppkg"
+  }
+}

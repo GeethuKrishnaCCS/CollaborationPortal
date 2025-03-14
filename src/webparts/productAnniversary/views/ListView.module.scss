@@ -1,0 +1,181 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.ListView {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+.box {
+  // background: #E8EFF4;
+  border-radius: 20px;
+
+  width: calc(100% - 2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+
+  // background: #f2f2f2;
+  // border: 1px solid #dedede;
+  background-color: rgb(240, 240, 250);
+  // border: 1px solid rgb(240, 240, 250);
+
+}
+
+
+
+
+.uparrow,
+.downarrow {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    span {
+      i {
+        font-size: 24px;
+        color: #6d6e71;
+      }
+    }
+
+    &:hover {
+      span {
+        i {
+          color: #0071ce;
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+      &:hover {
+        span {
+          i {
+            color: #6d6e71;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.uparrow {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.downarrow {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+
+.employee {
+  display: flex;
+  flex-direction: column;
+  height: 412px;
+  overflow: auto;
+  padding: 9px 22px;
+
+  .persondiv {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.customIconButton:hover {
+  background-color: transparent;
+}
+
+.customIconButton:disabled {
+  background: none;
+}
+
+.secondarytextstyle {
+  font-size: 12px;
+  line-height: 16px;
+  color: #666;
+  font-family: var(--fontFamilyCustomFont300, var(--fontFamilyBase));
+  font-weight: 400;
+}
+
+
+
+.ImgContainer {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.Image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.Profilecard {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+
+  &:hover {
+    .Namecard {
+      color: #0071ce;
+    }
+  }
+}
+
+.Namecard {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.secondarycard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% - 72px);
+}
+
+
+

@@ -1,0 +1,353 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.productAnniversary {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+// .nobirthday {
+//   background-color: rgba(199, 199, 199, 0.12);
+//   border-radius: 10px;
+//   position: relative;
+//   flex-direction: column;
+//   border: 2px solid #3E3D3D;
+//   padding: 20px;
+//   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+//   color: rgb(147, 145, 145);
+//   gap: 12px;
+//   -webkit-backdrop-filter: blur(50px);
+//   backdrop-filter: blur(50px);
+//   min-width: 270px;
+//   width: calc(100% - 100px);
+//   margin: 0 50px;
+//   height: 180px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 16px;
+//   font-style: italic;
+// }
+
+// .StackStyle {
+//   .StackStyleContainer {
+//     width: 100%;
+//     min-height: 420px;
+//   }
+
+
+
+//   .title {
+//     font-family: var(--fontFamilyCustomFont500, var(--fontFamilyBase));
+//     font-size: 48px;
+//     font-weight: 500;
+//     line-height: 72px;
+//     text-align: center;
+//     color: #fff;
+//     margin-bottom: 28px;
+
+//     @media screen and (max-width: 768px) {
+//       font-size: 30px;
+//       line-height: 31px;
+//       margin-bottom: 0px;
+//     }
+
+//   }
+
+//   .seeall {
+//     text-align: right;
+//     margin-right: 1em;
+//     font-size: 17px;
+//   }
+
+//   .link {
+//     color: #1d5447;
+//     text-decoration: underline;
+//   }
+
+//   .BirthdaySlider {
+//     width: 100%;
+//     position: relative;
+//     display: flex;
+
+//   }
+
+//   .Prevbtn {
+//     width: 48px;
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     z-index: 1;
+//   }
+
+//   .Nextbtn {
+//     width: 48px;
+//     position: absolute;
+//     right: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+
+//   .card {
+//     // background: "[theme:bodyText, default: #323130]";
+//     background-color: rgb(255 255 255 / 12%);
+//     border-radius: 10px;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     height: auto;
+//     border: 2px solid #3E3D3D;
+//     padding: 20px;
+//     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+//     text-align: center;
+//     color: #ffffff;
+//     gap: 24px;
+//     -webkit-backdrop-filter: blur(50px);
+//     backdrop-filter: blur(50px);
+//     min-width: 140px;
+//     max-width: calc(20% - 70px);
+//   }
+
+//   .date {
+//     padding-top: 10px;
+//     color: rgb(147, 145, 145);
+//     font-size: 10px;
+//     text-align: center;
+//   }
+
+//   .images {
+//     position: relative;
+//     height: 150px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 150px;
+//   }
+
+//   .innerring {
+//     position: absolute;
+//     left: 18px;
+//     top: 17px;
+//   }
+
+//   .outerring {
+//     position: absolute;
+//   }
+
+//   .dots {
+//     position: absolute;
+//   }
+
+//   .imgWidth {
+//     width: 100px;
+//     height: 100px;
+//     border-radius: 50%;
+//     object-fit: cover;
+
+//   }
+
+//   .imggrid {
+//     width: 150px;
+//     height: 150px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+//   .name {
+//     font-size: 18px;
+//     color: #ac0505;
+//     text-align: center;
+//     margin-top: 10px;
+//     font-weight: bold;
+//   }
+
+//   .designation {
+//     font-size: 12px;
+//     color: rgb(147, 145, 145);
+//     text-align: center;
+//   }
+
+//   .uploadarea {
+//     margin-top: 3em;
+//   }
+
+//   .details {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 8px;
+//   }
+
+//   .BirthdayCard {
+//     width: 100%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 2em;
+//     position: relative;
+//     padding: 0 50px;
+
+//     @media screen and (max-width: 768px) {
+//       display: block;
+//       gap: 2em;
+//     }
+//   }
+
+
+//   .NavigationLeftButtonStyling {
+//     float: left;
+//     padding: 20px;
+//     border: none;
+//     cursor: pointer;
+//     width: 48px;
+//     height: 48px;
+//     background: rgba(20, 20, 20, 0.65);
+//     color: #ffffff;
+//   }
+
+//   .NavigationRightButtonStyling {
+//     float: right;
+//     padding: 20px;
+//     border: none;
+//     cursor: pointer;
+//     width: 48px;
+//     height: 48px;
+//     background: rgba(20, 20, 20, 0.65);
+//     color: #ffffff;
+//   }
+
+
+//   button:disabled {
+//     opacity: 0.4;
+//     pointer-events: none;
+//   }
+
+//   .NavDot {
+//     display: flex;
+//     justify-content: center;
+//     gap: 12px;
+//     width: 100%;
+//     margin-top: 32px;
+
+//     .Dot {
+//       width: 20px;
+//       height: 20px;
+//       border-radius: 100%;
+//       background: #fff;
+//       border: inset 1px solid rgba(109, 110, 113, 1);
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+
+//       .InnerDot {
+//         background: #fff;
+//         width: 12px;
+//         height: 12px;
+//         border-radius: 100%;
+//       }
+
+//       &.active {
+//         border: inset 1px solid rgba(0, 113, 206, 1);
+
+//         .InnerDot {
+//           background: rgba(0, 113, 206, 1);
+//         }
+//       }
+//     }
+//   }
+// }
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.badge {
+  background-color: #A2D5AB;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.cardBody {
+  margin-top: 10px;
+}
+
+.role {
+  color: #0078D4;
+  font-weight: bold;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.cardFooter i {
+  font-size: 18px;
+  color: #888;
+}
+
+.noData {
+  text-align: center;
+  color: #7a7a7a;
+  padding: 20px;
+  font-size: 16px;
+}

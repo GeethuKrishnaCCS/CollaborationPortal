@@ -1,0 +1,146 @@
+.filmstripContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e0f3f1; // Light teal background
+}
+
+.cardContainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dateSection {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.month {
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 500;
+}
+
+.day {
+  font-size: 24px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+// .profileImage {
+//   width: 80px;
+//   height: 80px;
+//   border-radius: 50%;
+//   object-fit: cover;
+// }
+
+.category {
+  background-color: #d4f3e3;
+  color: #05764d;
+  padding: 4px 20px;
+  border-radius: 15px;
+  font-size: 12px;
+  margin: 10px auto;
+  width: fit-content;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100px;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.jobTitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.greetingType {
+  font-size: 14px;
+  color: #05764d;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 12px;
+  color: gray;
+}
+
+.location {
+  font-size: 12px;
+  color: #0080ff;
+  cursor: pointer;
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 12px;
+  // margin-top: 10px;
+  border-top: 1px solid #ddd;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+}
+
+.noDataMessage {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-top: 20px;
+}
+
+
+// Default profile image
+.profileImage {
+  object-fit: cover;
+}
+
+// Rectangle style
+.rectangleImageCard {
+  height: 100px; // Adjust width for rectangle
+  width: 85px; // Shorter height for rectangle
+  border-radius: 0px; // Optional slight rounding
+}
+
+// Square style
+.squareImageCard {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+// Circle style
+.circleImageCard {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
