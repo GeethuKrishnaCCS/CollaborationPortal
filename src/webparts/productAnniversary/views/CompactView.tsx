@@ -28,7 +28,7 @@ const CompactView: React.FC<ICompactViewProps> = (props) => {
         {props.greetings.map((greeting: any) => (
           <div className={styles.CompactCard} key={greeting.Id}>
             <div className={styles.cardImage}>
-              <img src={greeting.employeeImage || ''} alt={`Profile picture of ${greeting.Employee.Title}`} />
+              <img src={greeting.employeeImage || ''} alt={`${greeting.Employee.Title}`} />
             </div>
             <div className={styles.cardDetails}>
               { <div>{greeting.Employee.Title}</div>}

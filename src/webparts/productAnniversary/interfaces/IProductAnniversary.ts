@@ -25,22 +25,11 @@ export interface IProductAnniversaryProps {
   WorkGreetingWish: string;
   weddingGreetingWish: string;
 
-  // displayName: boolean;
-  // displayJobTitle: boolean;
-  // displayLocation: boolean;
-  // displayEmail: boolean;
-  // displayType: boolean;
-  // displayDOB: boolean;
-  // displayJoiningDate: boolean;
-  // displayWeddingDate: boolean;
 
-  // ListFields: { key: string; text: string }[];
-
-  ListFields: Array<{ key: string; text: string }>;
-  [key: string]: any;
+  collectionData: any;
 
   ShapeForImages: string;
-  displayItems: string;
+  // displayItems: string;
 }
 
 export interface IProductAnniversaryWebPartProps {
@@ -62,23 +51,9 @@ export interface IProductAnniversaryWebPartProps {
   WorkGreetingWish: string;
   weddingGreetingWish: string;
 
-  // displayName: boolean;
-  // displayJobTitle: boolean; 
-  // displayLocation: boolean; 
-  // displayEmail: boolean;
-  // displayType: boolean;
-  // displayDOB: boolean;
-  // displayJoiningDate: boolean;
-  // displayWeddingDate: boolean;
-
-  // ListFields: { key: string; text: string }[];
-
-  ListFields: Array<{ key: string; text: string }>;
-  [key: string]: any;
-
-
+  collectionData: any;
   ShapeForImages: string;
-  displayItems: string;
+  // displayItems: string;
 }
 
 export interface IProductAnniversaryModelProps {
@@ -105,23 +80,10 @@ export interface IProductAnniversaryModelProps {
   bdayGreetingWish: string;
   WorkGreetingWish: string;
   weddingGreetingWish: string;
-
-  // displayName: boolean;
-  // displayJobTitle: boolean;
-  // displayLocation: boolean;
-  // displayEmail: boolean;
-  // displayType: boolean;
-  // displayDOB: boolean;
-  // displayJoiningDate: boolean;
-  // displayWeddingDate: boolean;
-
-  // ListFields: { key: string; text: string }[];
-  
-  ListFields: Array<{ key: string; text: string }>;
-  [key: string]: any;
-
   ShapeForImages: string;
-  displayItems: string;
+  // displayItems: string;
+
+  collectionData: any;
 }
 
 
@@ -131,7 +93,4 @@ export interface IProductAnniversaryState {
   today: string;
   greetings: any;
 
-  // RenderedGreetings?: any;  
-  // Next?: any; 
-  // Count?: any;
 }

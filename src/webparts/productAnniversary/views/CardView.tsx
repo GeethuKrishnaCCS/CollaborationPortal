@@ -61,7 +61,7 @@ const CardView: React.FC<ICardViewProps> = ({
                         <div className={styles.imageContainer}>
                             <img
                                 src={greeting.employeeImage || ""}
-                                alt={`Profile picture of ${greeting.Employee.Title}`}
+                                alt={`${greeting.Employee.Title}`}
                                 className={styles.profileImage}
                             />
                         </div>

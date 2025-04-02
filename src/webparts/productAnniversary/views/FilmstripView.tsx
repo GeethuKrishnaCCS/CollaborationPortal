@@ -26,7 +26,7 @@ interface IFilmstripViewProps {
   context: any;
   
   ShapeForImages: string;
-  selectedFields: string[];
+  
 }
 
 const FilmstripView: React.FC<IFilmstripViewProps> = ({
@@ -35,7 +35,7 @@ const FilmstripView: React.FC<IFilmstripViewProps> = ({
   contentfontcolor,
 
   ShapeForImages,
-  selectedFields
+
 }) => {
   const itemsPerPage = 4;
   const [renderedGreetings, setRenderedGreetings] = React.useState<IFilmstripViewProps['greetings']>([]);

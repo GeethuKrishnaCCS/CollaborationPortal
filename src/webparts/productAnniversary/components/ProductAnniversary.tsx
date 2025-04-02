@@ -158,16 +158,8 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
             WorkGreetingWish={this.props.WorkGreetingWish}
             weddingGreetingWish={this.props.weddingGreetingWish}
             context={this.props.context}
-            // displayName={this.props.displayName}
-            // displayJobTitle={this.props.displayJobTitle}
-            // displayEmail={this.props.displayEmail}
-            // displayType={this.props.displayType}
-            // displayDOB={this.props.displayDOB}
-            // displayJoiningDate={this.props.displayJoiningDate}
-            // displayWeddingDate={this.props.displayWeddingDate}
-            // displayLocation={this.props.displayLocation} 
+       
             ShapeForImages={this.props.ShapeForImages} 
-            selectedFields={this.props.ListFields.filter(field => this.props[field.key]).map(field => field.key)}
                />
         )}
 
@@ -182,13 +174,7 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
             WorkGreetingWish={this.props.WorkGreetingWish}
             weddingGreetingWish={this.props.weddingGreetingWish}
             context={this.props.context}
-            // displayName={this.props.displayName}
-            // displayJobTitle={this.props.displayJobTitle}
-            // displayEmail={this.props.displayEmail}
-            // displayType={this.props.displayType}
-            // displayDOB={this.props.displayDOB}
-            // displayJoiningDate={this.props.displayJoiningDate}
-            // displayWeddingDate={this.props.displayWeddingDate}
+
           />
         )}
 
@@ -215,13 +201,7 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
             WorkGreetingWish={this.props.WorkGreetingWish}
             weddingGreetingWish={this.props.weddingGreetingWish}
             context={this.props.context}
-            // displayName={this.props.displayName}
-            // displayJobTitle={this.props.displayJobTitle}
-            // displayEmail={this.props.displayEmail}
-            // displayType={this.props.displayType}
-            // displayDOB={this.props.displayDOB}
-            // displayJoiningDate={this.props.displayJoiningDate}
-            // displayWeddingDate={this.props.displayWeddingDate}
+    
           />
         )}
 

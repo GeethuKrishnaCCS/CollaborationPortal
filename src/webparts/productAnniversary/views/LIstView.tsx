@@ -58,7 +58,7 @@ const ListView: React.FC<IListViewProps> = (props) => {
                                     <img
                                         src={item.employeeImage || ''}
                                         className={styles.Image}
-                                        alt={`Profile picture of ${item.Employee.Title}`}
+                                        alt={`${item.Employee.Title}`}
                                     />
                                 </div>
                                 <div className={styles.secondarycard}>

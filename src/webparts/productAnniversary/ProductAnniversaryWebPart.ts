@@ -7,8 +7,8 @@ import {
   PropertyPaneChoiceGroup,
   PropertyPaneDropdown,
   PropertyPaneToggle,
-  // PropertyPaneCheckbox,
-  // PropertyPaneLabel
+  // IPropertyPaneDropdownOption,
+
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
@@ -17,8 +17,8 @@ import * as strings from 'ProductAnniversaryWebPartStrings';
 import ProductAnniversary from './components/ProductAnniversary';
 import { IProductAnniversaryProps, IProductAnniversaryWebPartProps } from './interfaces/IProductAnniversary';
 import { PropertyFieldColorPicker, PropertyFieldColorPickerStyle } from '@pnp/spfx-property-controls/lib/PropertyFieldColorPicker';
-import { ProductAnniversaryService } from './services/ProductAnniversaryService';
 import { PropertyFieldCollectionData, CustomCollectionFieldType } from '@pnp/spfx-property-controls/lib/PropertyFieldCollectionData';
+// import { ProductAnniversaryService } from './services/ProductAnniversaryService';
 
 export interface IPropertyControlsTestWebPartProps {
   headingfontcolor: string;
@@ -27,32 +27,10 @@ export interface IPropertyControlsTestWebPartProps {
 }
 
 export default class ProductAnniversaryWebPart extends BaseClientSideWebPart<IProductAnniversaryWebPartProps> {
-
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
-  private _service: ProductAnniversaryService;
-
-  public async onInit(): Promise<void> {
-    this._service = new ProductAnniversaryService(this.context, this.context.pageContext.web.absoluteUrl);
-    // const lists = await this._service.getSharePointLists();
-    // this.properties.SharePointLists = lists.map(list => ({ key: list.Title, text: list.Title }));
-
-    // const Listfields = await this._service.getListFields("Anniversary");
-    // console.log('Listfields: ', Listfields);
-
-    const listFields = await this._service.getListFields("Anniversary");
-    console.log('Listfields: ', listFields.map(i => i.InternalName));
-
-    this.properties.ListFields = listFields.map(field => ({
-      key: field.InternalName,
-      text: field.InternalName
-    }));
-
-    return this._getEnvironmentMessage().then(message => {
-      this._environmentMessage = message;
-    });
-  }
-
+    // private _service: ProductAnniversaryService;
+ 
   public render(): void {
     const element: React.ReactElement<IProductAnniversaryProps> = React.createElement(
       ProductAnniversary,
@@ -80,29 +58,32 @@ export default class ProductAnniversaryWebPart extends BaseClientSideWebPart<IPr
         contentfontcolor: this.properties.contentfontcolor,
 
         StylesForCards: this.properties.StylesForCards,
-
-        // displayName: this.properties.displayName,
-        // displayJobTitle: this.properties.displayJobTitle,
-        // displayLocation: this.properties.displayLocation,
-        // displayEmail: this.properties.displayEmail,
-        // displayType: this.properties.displayType,
-        // displayDOB: this.properties.displayDOB,
-        // displayJoiningDate: this.properties.displayJoiningDate,
-        // displayWeddingDate: this.properties.displayWeddingDate,
-        ShapeForImages: this.properties.ShapeForImages,
-        displayItems: this.properties.displayItems,
-        ListFields: this.properties.ListFields,
-
+        
+        ShapeForImages: this.properties.ShapeForImages,       
+        collectionData: this.properties.collectionData,
       }
     );
 
     ReactDom.render(element, this.domElement);
   }
 
-  // protected onInit(): Promise<void> {
-  //   return this._getEnvironmentMessage().then(message => {
-  //     this._environmentMessage = message;
-  //   });
+  protected onInit(): Promise<void> {
+    return this._getEnvironmentMessage().then(message => {
+      this._environmentMessage = message;
+    });
+  }
+
+  // private async getTimeZones(): Promise<Array<IPropertyPaneDropdownOption>> {
+  //   const result: Array<IPropertyPaneDropdownOption> = [];
+  //   try {
+  //     const listFields = await this._service(this.properties.Anniversary); // Fetch fields from the specified list
+  //     for (const field of listFields) {
+  //       result.push({ key: field.InternalName, text: field.Title }); // Use InternalName as key and Title as text
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching list fields:", error);
+  //   }
+  //   return result;
   // }
 
   private _getEnvironmentMessage(): Promise<string> {
@@ -196,37 +177,33 @@ export default class ProductAnniversaryWebPart extends BaseClientSideWebPart<IPr
 
             {
               groupName: "Select Fields to Display",
-              // groupFields: this.properties.ListFields.map((field: { key: string; text: any }) =>
-              //   PropertyPaneCheckbox(field.key, {
-              //     text: field.text,
-              //     checked: this.properties[field.key] ?? false,
-              //   })
-              // ),
               groupFields: [
-                PropertyFieldCollectionData('ListFields', {
-                  key: 'ListFields',
-                  label: 'Select Fields to Display',
-                  panelHeader: 'Select Fields to Display',
-                  manageBtnLabel: 'Manage Fields',
-                  value: this.properties.ListFields,
+                PropertyFieldCollectionData("collectionData", {
+                  key: "collectionData",
+                  label: "Collection data",
+                  panelHeader: "Collection data panel header",
+                  manageBtnLabel: "Manage collection data",
+                  value: this.properties.collectionData,
                   fields: [
                     {
-                      id: 'key',
-                      title: 'Internal Name',
+                      id: "Location",
+                      title: "Location",
                       type: CustomCollectionFieldType.string,
                       required: true
                     },
+                  
                     {
-                      id: 'text',
-                      title: 'Display Name',
-                      type: CustomCollectionFieldType.string,
+                      id: "SelectTimeZone",
+                      title: "Select Time Zone",
+                      type: CustomCollectionFieldType.dropdown,
+                      // options: this.getTimeZones(),
                       required: true
-                    }
-                  ]
+                    },                    
+                  ],
+                  disabled: false
                 })
               ]
             },
-
 
             {
               groupName: "Wishing",
@@ -284,7 +261,6 @@ export default class ProductAnniversaryWebPart extends BaseClientSideWebPart<IPr
                     { key: 'Circle', text: 'Circle' },
                   ],
                 })
-
               ]
             },
 

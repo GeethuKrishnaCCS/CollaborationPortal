@@ -26,17 +26,9 @@ export default class ProductAnniversaryModel extends React.Component<IProductAnn
         WorkGreetingWish={this.props.WorkGreetingWish}
         weddingGreetingWish={this.props.weddingGreetingWish}
         SharePointLists={this.props.SharePointLists}
-        // displayName={this.props.displayName}
-        // displayJobTitle={this.props.displayJobTitle}
-        // displayEmail={this.props.displayEmail}
-        // displayType={this.props.displayType}
-        // displayDOB={this.props.displayDOB}
-        // displayJoiningDate={this.props.displayJoiningDate}
-        // displayWeddingDate={this.props.displayWeddingDate}
-        // displayLocation={this.props.displayLocation}
+      
         ShapeForImages={this.props.ShapeForImages}
-        displayItems={this.props.displayItems} 
-        ListFields={this.props.ListFields} 
+        collectionData={this.props.collectionData}
            
       >
       </ProductAnniversary>
