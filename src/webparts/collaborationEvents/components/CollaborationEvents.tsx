@@ -223,103 +223,6 @@ export default class EventsTemplate extends React.Component<ICollaborationEvents
               </div>
 
 
-              {/* {this.props.Cardlayout === "Filmstrip" && (
-                <>
-                  {this.state.ListDetails.length > 0 && (
-                    <div className={styles.StackStyle}>
-                      <div className={styles.StackStyleContainer}>
-                        <div className={styles.BirthdaySlider}>
-                          {this.state.ListDetails
-                            .filter((event: any) =>
-                              !this.props.location || event.Location === this.props.location
-                            )
-                            .map((event: any) => {
-                              const eventImageUrl = event.EventImage ? event.EventImage.split('?path=')[1] : "https://via.placeholder.com/150";
-                              return (
-                                <div className={styles.FilmstripCard} key={event.Id}>
-
-                                  <div className={styles.imageContainer}>
-                                    <img className={`${styles.profileImage} ${this.props.StylesForImages === "Square"
-                                      ? styles.squareImageCard
-                                      : this.props.StylesForImages === "Circle"
-                                        ? styles.circleImageCard
-                                        : this.props.StylesForImages === "Rectangle"
-                                          ? styles.rectangleImageCard
-                                          : ""
-                                      }`}
-                                      src={event.EventImage ? `https://ccsdev01.sharepoint.com${eventImageUrl}` : require('../assets/DefaultImage.png')}
-                                      alt={event.Title}
-                                    // className={styles.cardImage}
-                                    />
-
-                                    <div className={styles.date}>
-                                      {new Date(event.StartTime).toLocaleDateString("en-US", { month: "short", day: "numeric" })}
-                                    </div>
-
-                                  </div>
-
-
-                                  <div className={styles.cardContent}>
-                                    <span className={styles.category}>{event.Category}</span>
-                                    <h3 className={styles.title}>{event.Title}</h3>
-                                    <p className={styles.dateTime}>
-                                      {new Date(event.StartTime).toLocaleString("en-US", {
-                                        weekday: "short",
-                                        month: "short",
-                                        day: "numeric",
-                                        hour: "2-digit",
-                                        minute: "2-digit",
-                                      })}
-                                    </p>
-
-                                    <p>{event.Location}</p>
-
-                                    <div className={styles.actionButtons}>
-
-                                      <img
-                                        src={require('../assets/RSVP.png')}
-                                        className={styles.rsvpButton}
-                                      />
-
-                                      <img
-                                        src={require('../assets/Mail.png')}
-                                        className={styles.mailIcon}
-                                      />
-
-
-                                      <img
-                                        src={require('../assets/Comment.png')}
-                                        className={styles.commentIcon}
-                                      />
-
-                                      <img
-                                        src={require('../assets/Like.png')}
-                                        className={styles.likeIcon}
-                                      />
-
-                                    </div>
-
-                                  </div>
-                                </div>
-                              );
-                            })}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {this.state.ListDetails.length === 0 && (
-                    <div className={styles.nobirthday}>
-                      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.937 41.938L15.062 49.063L19.875 46.875L10.125 37.125L7.937 41.938Z" fill="#939191" fillOpacity="0.33" />
-                        <path d="M1.999 55.001L10.25 51.25L5.75 46.75L1.999 55.001Z" fill="#939191" fillOpacity="0.33" />
-                        <path d="M53.875 37.125L44.125 46.875L48.937 49.063L56.062 41.938L53.875 37.125Z" fill="#939191" fillOpacity="0.33" />
-                        <path d="M58.25 46.75L53.75 51.25L62.001 55.001L58.25 46.75Z" fill="#939191" fillOpacity="0.33" />
-                      </svg>
-                    </div>
-                  )}
-                </>
-              )} */}
-
               {this.props.Cardlayout === "Filmstrip" && (
                 <>
                   {this.state.ListDetails.length > 0 ? (
@@ -340,10 +243,6 @@ export default class EventsTemplate extends React.Component<ICollaborationEvents
                   )}
                 </>
               )}
-
-
-
-
 
               {this.props.Cardlayout === "Compact" && (
                 <>
