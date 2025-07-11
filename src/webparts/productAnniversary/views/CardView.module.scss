@@ -84,3 +84,13 @@
   cursor: pointer;
   color: #666;
 }
+
+.liked {
+  color: red;
+  /* Or any style for liked state */
+}
+
+.likesCount {
+  margin-left: 5px;
+  font-size: 12px;
+}

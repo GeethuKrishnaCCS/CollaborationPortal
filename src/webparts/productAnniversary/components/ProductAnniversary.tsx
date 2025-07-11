@@ -4,11 +4,12 @@ import type { IProductAnniversaryProps, IProductAnniversaryState } from '../inte
 import { ProductAnniversaryService } from '../services/ProductAnniversaryService';
 // import { IIconProps, IconButton } from '@fluentui/react';
 import * as moment from 'moment';
-import ListView from '../views/LIstView';
+
 import { IIconProps } from '@fluentui/react';
 import FilmstripView from '../views/FilmstripView';
 import CompactView from '../views/CompactView';
 import CardView from '../views/CardView';
+import ListView from '../views/LIstView';
 
 export default class ProductAnniversary extends React.Component<IProductAnniversaryProps, IProductAnniversaryState, {}> {
   private service: ProductAnniversaryService;
@@ -37,7 +38,7 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
 
     // const Listfields = await this.service.getListFields("Anniversary");
     // console.log('Listfields: ', Listfields);
-  
+
   }
 
 
@@ -144,7 +145,7 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
     return (
       <section className={`${styles.productAnniversary} ${hasTeamsContext ? styles.teams : ''}`}>
         {/* Heading */}
-        <h2 style={{ color: headingfontcolor }}>{this.props.description}</h2>
+        <h2 style={{ color: headingfontcolor, fontFamily: this.props.headingFontFamily }}>{this.props.description}</h2>
 
         {/* Contents */}
         {Cardlayout === "Filmstrip" && (
@@ -154,13 +155,18 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
             nexticon={{ iconName: 'ChevronRightSmall' } as IIconProps}
             contentfontcolor={this.props.contentfontcolor}
             headingfontcolor={this.props.headingfontcolor}
+            headingFontFamily={this.props.headingFontFamily}
+            contentFontfamily={this.props.contentFontfamily}
             bdayGreetingWish={this.props.bdayGreetingWish}
             WorkGreetingWish={this.props.WorkGreetingWish}
             weddingGreetingWish={this.props.weddingGreetingWish}
             context={this.props.context}
-       
-            ShapeForImages={this.props.ShapeForImages} 
-               />
+
+            ShapeForImages={this.props.ShapeForImages}
+            displayListFields={this.props.displayListFields}
+            AnniversaryListUrl = {this.props.Anniversary}
+            
+          />
         )}
 
         {Cardlayout === "Cards" && (
@@ -174,6 +180,10 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
             WorkGreetingWish={this.props.WorkGreetingWish}
             weddingGreetingWish={this.props.weddingGreetingWish}
             context={this.props.context}
+
+            ShapeForImages={this.props.ShapeForImages}
+            displayListFields={this.props.displayListFields}
+            AnniversaryListUrl = {this.props.Anniversary}
 
           />
         )}
@@ -201,7 +211,7 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
             WorkGreetingWish={this.props.WorkGreetingWish}
             weddingGreetingWish={this.props.weddingGreetingWish}
             context={this.props.context}
-    
+
           />
         )}
 

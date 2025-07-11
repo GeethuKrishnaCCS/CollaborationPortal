@@ -105,11 +105,28 @@
   gap: 20px;
 }
 
+
+
 .icon {
-  font-size: 18px;
   cursor: pointer;
-  color: #555;
+  transition: color 0.3s ease;
+  font-size: 18px;
 }
+
+
+
+.liked {
+  color: red;
+  cursor: pointer;
+}
+
+.likeContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
 
 .noDataMessage {
   text-align: center;
@@ -144,3 +161,39 @@
   height: 100px;
   border-radius: 50%;
 }
+
+
+//card footer style
+
+.cardFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.likeSection {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+.unlikedIcon {
+  color: grey;
+}
+
+.liked {
+  color: red;
+  /* Or any style for liked state */
+}
+
+.likesCount {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+
+

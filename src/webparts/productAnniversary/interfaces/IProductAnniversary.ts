@@ -13,7 +13,9 @@ export interface IProductAnniversaryProps {
   SharePointLists: { key: string; text: string }[];
 
   headingfontcolor: string;
+  headingFontFamily: string;
   contentfontcolor: string;
+  contentFontfamily: string;
   StylesForCards: string;
   AnniversayNoOfItemDisplay: string;
 
@@ -26,7 +28,7 @@ export interface IProductAnniversaryProps {
   weddingGreetingWish: string;
 
 
-  collectionData: any;
+  displayListFields: any;
 
   ShapeForImages: string;
   // displayItems: string;
@@ -41,6 +43,8 @@ export interface IProductAnniversaryWebPartProps {
 
   headingfontcolor: string;
   contentfontcolor: string;
+  headingFontFamily: string;
+  contentFontfamily: string;
   StylesForCards: string;
   AnniversayNoOfItemDisplay: string;
 
@@ -51,7 +55,7 @@ export interface IProductAnniversaryWebPartProps {
   WorkGreetingWish: string;
   weddingGreetingWish: string;
 
-  collectionData: any;
+  displayListFields: any;
   ShapeForImages: string;
   // displayItems: string;
 }
@@ -70,6 +74,8 @@ export interface IProductAnniversaryModelProps {
 
   headingfontcolor: string;
   contentfontcolor: string;
+  headingFontFamily: string;
+  contentFontfamily: string;
   
   StylesForCards: string;
   AnniversayNoOfItemDisplay: string;
@@ -83,7 +89,7 @@ export interface IProductAnniversaryModelProps {
   ShapeForImages: string;
   // displayItems: string;
 
-  collectionData: any;
+  displayListFields: any;
 }
 
 
