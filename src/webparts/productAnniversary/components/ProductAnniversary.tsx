@@ -139,13 +139,13 @@ export default class ProductAnniversary extends React.Component<IProductAnnivers
   }
 
   render() {
-    const { hasTeamsContext, Cardlayout, headingfontcolor } = this.props;
+    const { hasTeamsContext, Cardlayout,  } = this.props;
     // const backicon: IIconProps = { iconName: 'ChevronLeftSmall' };
     // const nexticon: IIconProps = { iconName: 'ChevronRightSmall' };
     return (
       <section className={`${styles.productAnniversary} ${hasTeamsContext ? styles.teams : ''}`}>
         {/* Heading */}
-        <h2 style={{ color: headingfontcolor, fontFamily: this.props.headingFontFamily }}>{this.props.description}</h2>
+        <div className={styles.bdayheading} style={{ color: this.props.headingfontcolor, fontFamily: this.props.headingFontFamily }}>{this.props.description}</div>
 
         {/* Contents */}
         {Cardlayout === "Filmstrip" && (

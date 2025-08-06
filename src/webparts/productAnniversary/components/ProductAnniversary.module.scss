@@ -2,7 +2,8 @@
 
 .productAnniversary {
   overflow: hidden;
-  padding: 1em;
+  // padding: 1em;
+  padding: 0 !important;
   color: "[theme:bodyText, default: #323130]";
   color: var(--bodyText);
 
@@ -34,6 +35,13 @@
   }
 }
 
+.bdayheading {
+  font-size: 22px;
+  font-weight: 400;
+  margin-left: 65px;
+  margin-bottom: 5px;
+}
+
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -43,7 +51,7 @@
 .card {
   background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
   text-align: center;
 }
@@ -101,5 +109,5 @@
 }
 
 .liked {
-  color: red; 
+  color: red;
 }

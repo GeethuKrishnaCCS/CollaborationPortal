@@ -3,7 +3,7 @@
   "solution": {
     "name": "product-development-client-side-solution",
     "id": "264ceecc-0b00-49dd-a31a-3f595c31bbee",
-    "version": "1.0.0.0",
+    "version": "1.0.0.2",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
