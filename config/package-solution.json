@@ -83,18 +83,26 @@
       "longDescription": {
         "default": "ProductDevelopment description"
       },
-      "screenshotPaths": [],
-      "videoUrl": "",
-      "categories": []
-    },
-    "features": [
-      {
-        "title": "product-development Feature",
-        "description": "The feature that activates elements of the product-development solution.",
-        "id": "7ad67f4d-5f72-4b89-8704-96a8f5351ffc",
-        "version": "1.0.0.0"
-      }
-    ]
+      "metadata": {
+        "shortDescription": {
+          "default": "CollaborationEvents description"
+        },
+        "longDescription": {
+          "default": "CollaborationEvents description"
+        },
+        "screenshotPaths": [],
+        "videoUrl": "",
+        "categories": []
+      },
+      "features": [
+        {
+          "title": "product-development Feature",
+          "description": "The feature that activates elements of the product-development solution.",
+          "id": "7ad67f4d-5f72-4b89-8704-96a8f5351ffc",
+          "version": "1.0.0.0"
+        }
+      ]
+    }
   },
   "paths": {
     "zippedPackage": "solution/product-development.sppkg"

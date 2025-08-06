@@ -14,8 +14,16 @@
     "packageManager": "npm",
     "solutionName": "ProductDevelopment",
     "solutionShortDescription": "ProductDevelopment description",
-    "skipFeatureDeployment": true,
-    "isDomainIsolated": false,
-    "componentType": "webpart"
-  }
+    "@microsoft/teams-js": "2.24.0"
+  },
+  "version": "1.20.0",
+  "libraryName": "collaboration-events",
+  "libraryId": "56153a4e-1088-46f7-ba77-b52dfaaba24e",
+  "environment": "spo",
+  "packageManager": "npm",
+  "solutionName": "CollaborationEvents",
+  "solutionShortDescription": "CollaborationEvents description",
+  "skipFeatureDeployment": true,
+  "isDomainIsolated": false,
+  "componentType": "webpart"
 }

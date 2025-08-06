@@ -17,8 +17,17 @@ export class BaseService implements IBaseService {
         this.sp = getSP(context);
         this.sitesp = new SPFI(siteUrl).using(SPFx(context));
     }
+  
+    getChoiceListItems(url: string, field: string): Promise<any> {
+        throw new Error("Method not implemented.");
+    }
+
     public getCurrentUser() {
         return this.sp.web.currentUser();
+    }
+
+    public getCurrentUserGroups() {
+        return this.sp.web.currentUser.groups();
     }
 
     public async getPagedListItems(queryurl: string): Promise<any> {
@@ -73,11 +82,13 @@ export class BaseService implements IBaseService {
         return this.sp.web.getList(queryurl).items
             .getById(id)()
     }
+
     public getItemsByIdSelect(queryurl: string, id: any, select: string): Promise<any> {
         return this.sp.web.getList(queryurl).items
             .getById(id)
             .select(select)()
     }
+
     public getItemsFilter(queryurl: string, filter: string): Promise<any> {
         return this.sp.web.getList(queryurl).items
             .filter(filter)()
@@ -86,11 +97,13 @@ export class BaseService implements IBaseService {
         return this.sitesp.web.getList(queryurl).items
             .filter(filter)()
     }
+
     public getItemsSelectFilter(queryurl: string, select: string, filter: string): Promise<any> {
         return this.sp.web.getList(queryurl).items
             .select(select)
             .filter(filter)()
     }
+
     public getItemsSelectExpandFilter(queryurl: string, select: string, expand: string, filter: string): Promise<any> {
         return this.sp.web.getList(queryurl).items
             .select(select)
@@ -154,6 +167,7 @@ export class BaseService implements IBaseService {
     public async getUser(userId: number): Promise<any> {
         return this.sp.web.getUserById(userId)();
     }
+
     public async getAllFoldersAndFiles(folderUrl: string): Promise<FolderItem[]> {
         const folder = this.sp.web.getFolderByServerRelativePath(folderUrl);
 
@@ -206,5 +220,8 @@ export class BaseService implements IBaseService {
     public getExtChoiceListItems(url: string, field: string): Promise<any> {
         return this.sitesp.web.getList(url).fields.getByInternalNameOrTitle(field)();
     }
+    // public getChoiceListItems(url: string, field: string): Promise<any> {
+    //     return this.sp.web.getList(url).fields.getByInternalNameOrTitle(field)();
+    // }
 
 }

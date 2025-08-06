@@ -18,6 +18,11 @@ export interface IBaseService {
     getItemsByIdSelect(queryurl: string, id: any, select: string): Promise<any>;
     getItemsFilter(queryurl: string, filter: string): Promise<any>;
     getExtItemsFilter(queryurl: string, filter: string): Promise<any>;
+    getItemsSelect(queryurl: string, select: string): Promise<any>;
+    getItemsSelectExpand(queryurl: string, select: string, expand: string): Promise<any>;
+    getItemsById(queryurl: string, id: any): Promise<any>;
+    getItemsByIdSelect(queryurl: string, id: any, select: string): Promise<any>;
+    getItemsFilter(queryurl: string, filter: string): Promise<any>;
     getItemsSelectFilter(queryurl: string, select: string, filter: string): Promise<any>;
     getItemsSelectExpandFilter(queryurl: string, select: string, expand: string, filter: string): Promise<any>;
     getPagedItemsSelectExpand(queryurl: string, select: string, expand: string): Promise<any>;
@@ -36,4 +41,5 @@ export interface IBaseService {
     uploadDocument(libraryName: string, Filename: any, filedata: any): Promise<any>;
     getLibraryItem(queryurl: string, id: number): Promise<any>;
     getExtChoiceListItems(url: string, field: string): Promise<any>;
+    getChoiceListItems(url: string, field: string): Promise<any>;
 }
