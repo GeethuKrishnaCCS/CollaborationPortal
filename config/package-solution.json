@@ -102,7 +102,15 @@
           "version": "1.0.0.0"
         }
       ]
-    }
+    },
+    "features": [
+      {
+        "title": "product-development Feature",
+        "description": "The feature that activates elements of the product-development solution.",
+        "id": "d08f6f9d-4523-4648-8bd0-c3196d0fb609",
+        "version": "1.0.0.0"
+      }
+    ]
   },
   "paths": {
     "zippedPackage": "solution/product-development.sppkg"

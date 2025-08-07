@@ -1,0 +1,148 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.collaborationBanner {
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  color: var(--bodyText);
+  height: 550px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    // background-position: center;
+    z-index: 0;
+
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 20px 40px;
+    // background: rgba(51, 51, 51, .8);
+    // color: white;
+    border-radius: 10px;
+    max-width: 420px;
+    left: 96px;
+    height: 280px;
+    backdrop-filter: blur(15px);
+  }
+
+  .welcomecontainer {
+    width: 278px;
+    height: 112px;
+    padding-top: 25px;
+  }
+
+  .welcomeText {
+    font-size: 38px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .userName {
+    font-size: 42px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .missioncontainer {
+    width: 363px;
+    height: 123px;
+    padding-top: 20px;
+
+  }
+
+  // .missionText {
+  //   font-size: 24px;
+  //   font-weight: 700;
+  //   margin: 10px 0;
+  // }
+
+  .missionDescription {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 300;
+  }
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: var(--link);
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--linkHovered);
+    }
+  }
+}
+
+//new design
+.newBanner {
+  display: grid;
+  min-height: 350px;
+  background: #fff;
+  grid-template-columns: 1fr 1fr;
+}
+
+.newLeftColumn {
+  flex: 1;
+  // padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 120px;
+}
+
+.newTextContainer {
+  width: 437px;
+  // border: 1px solid black;
+  height: 221px;
+}
+
+.newWelcomeBold {
+  font-weight: 700;
+  font-size: 24px;
+  // color: #222;
+}
+
+.newUserHighlight {
+  // color: #8e24aa;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.newSubtitle {
+  margin-top: 24px;
+  font-size: 48px;
+  // color: #4b2e83;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.newRightColumn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #fff 0%, #f3f3f3 100%);
+}
+
+.newBannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}

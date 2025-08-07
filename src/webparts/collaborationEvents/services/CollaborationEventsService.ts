@@ -8,7 +8,7 @@ import { IItem } from "@pnp/sp/items";
 
 export class CollaborationEventsService extends BaseService implements ICollaborationEventsService {
     private spfi: SPFI;
-    constructor(context: WebPartContext, siteUrl?: string) {
+    constructor(context: WebPartContext, siteUrl: string) {
         super(context, siteUrl);
         this.spfi = getSP(context);
     }

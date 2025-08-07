@@ -17,12 +17,21 @@
           "manifest": "./src/webparts/collaborationEvents/CollaborationEventsWebPart.manifest.json"
         }
       ]
+    },
+    "collaboration-banner-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationBanner/CollaborationBannerWebPart.js",
+          "manifest": "./src/webparts/collaborationBanner/CollaborationBannerWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "ProductAnniversaryWebPartStrings": "lib/webparts/productAnniversary/loc/{locale}.js",
     "CollaborationEventsWebPartStrings": "lib/webparts/collaborationEvents/loc/{locale}.js",
-    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "CollaborationBannerWebPartStrings": "lib/webparts/collaborationBanner/loc/{locale}.js"
   }
 }

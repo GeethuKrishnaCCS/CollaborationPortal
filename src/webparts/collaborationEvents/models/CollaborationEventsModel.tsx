@@ -10,7 +10,7 @@ export default class CollaborationEventModel extends React.Component<ICollaborat
   private CollaborationEventsService: CollaborationEventsService;
   constructor(props: ICollaborationEventsModelProps) {
     super(props);
-    this.CollaborationEventsService = new CollaborationEventsService(this.props.context);
+    this.CollaborationEventsService = new CollaborationEventsService(this.props.context, this.props.context.pageContext.web.serverRelativeUrl);
     this.state = {
       userData: { mail: "", title: "" }
     }
