@@ -1,0 +1,183 @@
+.filmstripContainer {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 auto;
+  transition: max-width 0.3s;
+
+  &.small {
+    max-width: 200px;
+    
+    .cardWrapper {
+      height: 160px;
+      width: 100px;
+      padding: 30px 20px;
+      
+      .cardTitle {
+        max-width: 150px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &.medium {
+    max-width: 490px;
+    
+    .cardWrapper {
+      height: 140px;
+      width: 150px;
+      padding: 36px 24px;
+      
+      .cardTitle {
+        max-width: 120px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &.large {
+    max-width: 980px;
+    
+    .cardWrapper {
+      height: 140px;
+      width: 150px;
+      padding: 36px 24px;
+      
+      .cardTitle {
+        max-width: 140px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+// [Rest of your existing CSS remains the same]
+.carousel-container {
+  display: none;
+  position: initial;
+}
+
+.cardWrapper {
+  background-color: rgba(231, 251, 250, 1);
+  border-radius: 20px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: var(--card-hover-color)!important;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 15px;
+  height: 100%;
+}
+
+.cardIcon {
+  font-size: 40px;
+}
+
+.cardImage {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.editButton {
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    color: #0078d4;
+  }
+}
+
+.cardTitle {
+  color: #03787c;
+  font-weight: 500;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  padding: 10px 5px;
+}
+
+.custom-dot-list-style {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  li {
+    margin: 0 5px;
+    
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: #d3d3d3;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    &.react-multi-carousel-dot--active button {
+      background-color: #03787c;
+    }
+  }
+}
+
+.react-multi-carousel-dot {
+  button{
+    width: 18px;
+    height: 18px;
+    background: rgba(217, 217, 217, 1);
+    border: 0 !important;
+  }
+}
+
+.react-multi-carousel-dot button{
+   border: 0 !important;
+}
+
+.carousel-item-padding-10-px {
+  padding: 0 5px;
+}
+
+:global(.react-multi-carousel-dot-list){
+  margin-bottom: 7px;
+}
+
+:global(.react-multi-carousel-dot-list button){
+  background: rgba(217, 217, 217, 1);
+  border: 0 !important;
+  width: 12px;
+  height: 12px;
+}
+
+:global(.react-multi-carousel-dot--active button){
+  background: rgba(3, 120, 124, 1);
+  border: 0 !important;
+}

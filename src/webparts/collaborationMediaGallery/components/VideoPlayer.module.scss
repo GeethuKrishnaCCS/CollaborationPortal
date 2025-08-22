@@ -1,0 +1,33 @@
+.videoplayer {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  padding-bottom: 56.25%;
+  border-radius: 15px;
+  overflow: hidden;
+
+  /* Animation */
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+.videoplayer>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Keyframes for fade in and scale */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,74 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.collaborationMediaGallery {
+  overflow: hidden;
+  // padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+
+.galleryHeading {
+  font-size: 22px;
+  font-weight: 400;
+  // margin-left: 65px;
+  margin-bottom: 5px;
+}
+
+.errorMessage {
+  color: "red"
+}
+
+.mediaContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; 
+}
+
+.playerContainer {
+  flex: 2; 
+  max-width: 66.66%; 
+  aspect-ratio: 16/9;
+}
+
+.listContainer {
+  flex: 1;
+  max-width: 33.33%; 
+  height: 100%;
+}
+
+@media (max-width: 1080px) {
+  .mediaContainer {
+    flex-direction: column;
+  }
+
+  .playerContainer, .listContainer {
+    max-width: 100%;
+  }
+}

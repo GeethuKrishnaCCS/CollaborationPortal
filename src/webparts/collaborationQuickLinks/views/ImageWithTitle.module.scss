@@ -1,0 +1,119 @@
+/* components/ImageWithTitle.module.scss */
+:root {
+  --tile-width: 150px;
+  --tile-height: 120px;
+  --num-columns: 5;
+  --card-color: white;
+  --text-color: black;
+  --icon-color: black;
+}
+
+.quickAccessContent {
+display: flex; /* Add flex container to control alignment */
+  width: 100%;
+  justify-content: center;
+ }
+
+.imageGrid {
+  display: grid;
+  background: var(--card-color);
+  grid-template-columns: repeat(var(--num-columns), minmax(var(--tile-width), 1fr));
+  gap: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  width: fit-content; /* Allow grid to shrink to content for alignment */
+  max-width: 100%; /* Prevent overflow */
+
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr !important; /* Stack vertically on small screens */
+    width: 100%;
+  }
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.card {
+  width: var(--tile-width);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+
+}
+
+
+.imageArea {
+  width: 100%;
+  height: var(--tile-height); /* Use dynamic tile height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardLogo {
+  width: 100%;
+  height: var(--tile-height); /* Use dynamic tile height */
+  object-fit: cover;
+}
+
+.fallbackIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #0078d4;
+  &:hover  {
+  background-color: var(--card-hover-color) !important;
+}
+}
+
+.linkIcon {
+  font-size: 32px;
+  color: #fff;
+}
+
+.editButton {
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    color: #0078d4;
+  }
+}
+
+.title {
+  padding-left: 5px;
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--text-color);
+
+  /* Required for text truncation */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis when text overflows */
+
+  /* Dimension constraints */
+  max-width: 150px; /* Use full width of the card */
+  width: 100%; /* Take full available width */
+  display: block; /* Block display needed for truncation */
+}
+
+.linkproperties {
+  text-decoration: none;
+}

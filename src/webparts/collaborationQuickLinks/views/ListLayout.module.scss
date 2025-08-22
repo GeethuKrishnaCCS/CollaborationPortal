@@ -1,0 +1,115 @@
+/* components/ListLayout.module.scss */
+:root {
+  --tile-width: 180px;
+  --tile-height: 50px;
+  --num-columns: 5;
+  --card-color: white;
+  --text-color: black;
+  --icon-color: black;
+}
+
+.listContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--tile-width), 1fr)); 
+  gap: 20px;
+  padding: 24px;
+  background-color: var(--card-color);
+  border-radius: 30px;
+  width: fit-content;
+  // width: 100%;               
+  max-width: 100%;            
+  margin: 0 auto;   
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr !important; /* Stack vertically on small screens */
+  }
+}
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.listItem {
+  width: var(--tile-width);
+  height: var(--tile-height);
+  background-color: transparent;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  &:hover  {
+  background-color: var(--card-hover-color) !important;
+}
+
+   &.textOnly {
+    justify-content: center;
+  }
+}
+
+.listLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.listContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center all content (icon + title or just title) */
+  gap: 25px;
+  padding: 12px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.listIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.listFluentIcon {
+  font-size: 24px;
+  color: var(--icon-color);
+}
+
+.listImageIcon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.listTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+ text-overflow: ellipsis;
+  display: block;
+  max-width: 100px;
+  color: var(--text-color);
+
+}
+
+.editButton {
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    color: #0078d4;
+  }
+}

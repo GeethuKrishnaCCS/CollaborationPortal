@@ -1,0 +1,678 @@
+.yearViewContainer {
+  padding: 0;
+  text-align: center;
+
+:global(.rbc-month-view){
+    border:0;
+    box-shadow: none;
+}
+
+:global(.rbc-month-view .rbc-header){
+    border:0;
+    text-align: center;
+}
+
+:global(.rbc-day-bg+.rbc-day-bg){
+   border:0;
+}
+
+:global(.rbc-month-row+.rbc-month-row){
+    border:0;
+}
+:global(.rbc-off-range-bg){
+    visibility: hidden;
+}
+
+:global(.rbc-date-cell.rbc-off-range){
+    visibility: hidden;
+}
+:global(.rbc-date-cell){
+    min-height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(.rbc-date-cell.rbc-now){
+    color: white;
+    position: relative;
+}
+:global(.rbc-date-cell.rbc-now button){
+    color: white !important;
+}
+:global(.rbc-month-row .rbc-date-cell button){
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    color: #666666;
+}
+
+:global(.rbc-date-cell.rbc-now:after){
+    background: #03787C;
+    color: white;
+    border-radius: 50%;
+    content: '';
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  :global(.rbc-calendar){
+      max-width: 336px;
+      margin: 0 auto;
+  }
+  .monthTitle{
+    margin: 0px auto 15px;
+    max-width: 316px;
+    padding: 0 10px;
+  }
+  :global(.rbc-calendar){
+      max-width: 336px;
+      margin: 0 auto;
+  }
+
+  :global(.rbc-month-row .rbc-date-cell){
+      padding: 0;
+      text-align: center;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.yearTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 15px;
+  color: #333;
+}
+
+.navButton {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.3s;
+}
+
+.navButton:disabled {
+  color: #bbb;
+  cursor: default;
+}
+
+.navButton:hover:not(:disabled) {
+  color: #000;
+}
+
+.monthGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+
+
+.monthContainer {
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: 0.3s;
+  background-color: #ffffff; 
+}
+
+.monthTitle {
+  margin-top: 0;
+  // margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.25px;
+  text-align: left;
+  vertical-align: middle;
+}
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background: #CFFFF5; 
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.rightSection {
+  background: rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  padding: 7px 4px;
+}
+
+.viewButton {
+    background: transparent;
+    border: none;
+    border-radius: 150px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 100%;
+    padding: 5px 10px;
+    vertical-align: middle;
+  transition: 0.3s;
+
+  &:hover{
+          background: #fff;
+  }
+
+  &.active {
+      background: #fff;
+        color: #000;
+    }
+}
+
+
+.backButton {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.backButton:hover {
+  background-color: #005a9e;
+}
+.hoverBox {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 200px;
+  z-index: 10;
+}
+
+.closePopupButton {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  background: transparent;
+}
+
+.hoverPopup {
+  position: absolute;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  padding: 16px 12px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 320px;
+
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+
+  h5 {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  h4 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #888;
+  }
+
+  h3{
+    background: rgba(204, 232, 231, 1);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(3, 120, 124, 1);
+    margin: 16px 0;
+    padding: 10px;
+  }
+
+  ul {
+    margin: 0;
+
+    li {
+        margin-bottom: 6px;
+        padding: 0 15px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        text-align: left;
+        color: rgba(51, 51, 51, 1);
+        margin-bottom: 16px !important;
+      }
+  }
+
+  p {
+    margin: 4px 0 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: rgba(150, 150, 150, 1);
+  }
+}
+
+.upcomingEventsBox {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 1rem;
+  max-height: 350px;
+  overflow-y: scroll;
+  h3 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      margin: 0;
+      color: rgba(56, 56, 56, 1);
+      text-align: left;
+    }
+
+    .eventHeader{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .backButton{
+      background: rgba(3, 120, 124, 1);
+      border-radius: 150px;
+      color: #fff;
+      margin-bottom: 0;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .eventItem{
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+
+      strong{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: rgba(51, 51, 51, 1);
+      }
+      
+      p{
+        margin-top: 0;
+      }
+    }
+
+    .eventListScrollable{
+       .eventItem{
+          background: rgba(235, 235, 248, 1);
+          margin-bottom: 2px;
+          justify-content: start;
+          
+           p{
+              margin: 0;
+            }
+      }
+    }
+}
+
+.active_bc16fb70
+.backButton {
+  background: none;
+  border: none;
+  color: #0078d4;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+
+
+.eventList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.scrollableEvents {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.scrollableEvents ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+.hoverPopup {
+  overflow-y: auto;  
+  scrollbar-width: thin; 
+  scrollbar-color: #c0c0c0 transparent; 
+}
+
+.hoverPopup::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hoverPopup::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 4px;
+}
+
+.hoverPopup::-webkit-scrollbar-track {
+  background: transparent;
+}
+.eventListScrollable {
+  max-height: 300px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.customEventSlotWrapper {
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 2px;
+}
+
+
+.futureViewContainer {
+  max-height: 400px; 
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1);
+  margin-top: 1rem;
+  padding: 20px;
+
+  .headerSection{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    background: transparent;
+
+    h3{
+      color: #383838;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 100%;
+      margin: 0;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .backButton{
+      background: rgba(3, 120, 124, 1);
+      border-radius: 150px;
+      color: #fff;
+      margin-bottom: 0;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.futureMonthBox {
+  margin-bottom: 10px;
+  
+  h4{
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(204, 232, 231, 1);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(3, 120, 124, 1);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .eventItem{
+    align-items: center;
+    padding: 8px 16px;
+    text-align: left;
+
+    strong{
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: rgba(51, 51, 51, 1);
+    }
+
+    p{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: rgba(150, 150, 150, 1);
+    }
+}
+}
+
+.eventListScrollable {
+  overflow: visible;
+}
+
+.closeBtn {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  color: #d32f2f;
+}
+
+.yearNav {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.monthNav {
+  display: inline-flex;
+  align-items: center;
+
+  .monthTitle{
+    margin: 0;
+  }
+}
+.moreItem {
+  text-align: center;
+  color: #0078d4;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.upcomingIcon {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 8px;
+  &:hover {
+    color: #0078d4; 
+  }
+}
+
+.hoverPopup {
+  overflow-y: auto;
+  font-size: 0.9rem;
+
+  h4 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  strong {
+    display: block;
+    font-weight: 600;
+  }
+}
+
+.eventDay {
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: #b3e0ff !important; /* Darker shade on hover */
+  }
+}
+.dateHoverPopup {
+  position: absolute;
+  background: #f8f8f8; /* Slightly different background */
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2100; /* Higher z-index for hover popup */
+  max-width: 250px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+
+  h4 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  strong {
+    display: block;
+    font-weight: 600;
+    color: #000;
+  }
+
+  p {
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    color: #555;
+  }
+}
+.dayWrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+}
+.eventIndicator {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #1890ff;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.monthHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.monthUpcomingIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 8px;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+

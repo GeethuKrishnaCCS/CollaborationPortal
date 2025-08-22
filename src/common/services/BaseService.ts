@@ -11,16 +11,18 @@ import "@pnp/sp/lists"
 import "@pnp/sp/fields";
 
 export class BaseService implements IBaseService {
-    private sp: SPFI;
+    public sp: SPFI;
     private sitesp: SPFI;
     constructor(context: WebPartContext, siteUrl: string) {
         this.sp = getSP(context);
         this.sitesp = new SPFI(siteUrl).using(SPFx(context));
     }
-  
-    getChoiceListItems(url: string, field: string): Promise<any> {
-        throw new Error("Method not implemented.");
-    }
+
+    // getChoiceListItems(url: string, field: string): Promise<any> {
+    //     throw new Error("Method not implemented.");
+    // }
+
+    
 
     public getCurrentUser() {
         return this.sp.web.currentUser();
@@ -220,8 +222,34 @@ export class BaseService implements IBaseService {
     public getExtChoiceListItems(url: string, field: string): Promise<any> {
         return this.sitesp.web.getList(url).fields.getByInternalNameOrTitle(field)();
     }
-    // public getChoiceListItems(url: string, field: string): Promise<any> {
-    //     return this.sp.web.getList(url).fields.getByInternalNameOrTitle(field)();
-    // }
+   public getChoiceListItems(url: string, field: string): Promise<any> {
+        return this.sp.web.getList(url).fields.getByInternalNameOrTitle(field)();
+    }
 
+    //My Teams
+    public async getManagers(context: any): Promise<any> {
+        const client = await context.msGraphClientFactory.getClient("3");
+        const groupmembers = await client
+            .api('me/manager')
+            .version('v1.0')
+            .get();
+
+        return groupmembers;
+
+
+    }
+    public async getResponders(context: any): Promise<any> {
+        const client = await context.msGraphClientFactory.getClient("3");
+        const groupmembers = await client
+            .api('me/directReports')
+            .version('v1.0')
+            .get();
+
+        return groupmembers;
+    }
+
+    // Image Carousel Service
+    public getImageItems(url: string, selectquery: string): Promise<any> {
+        return this.sp.web.getList(url).items.select(selectquery)();
+    }
 }

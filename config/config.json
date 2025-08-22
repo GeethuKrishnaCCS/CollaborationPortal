@@ -25,6 +25,62 @@
           "manifest": "./src/webparts/collaborationBanner/CollaborationBannerWebPart.manifest.json"
         }
       ]
+    },
+    "collaboration-quick-links-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationQuickLinks/CollaborationQuickLinksWebPart.js",
+          "manifest": "./src/webparts/collaborationQuickLinks/CollaborationQuickLinksWebPart.manifest.json"
+        }
+      ]
+    },
+    "collaboration-news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationNews/CollaborationNewsWebPart.js",
+          "manifest": "./src/webparts/collaborationNews/CollaborationNewsWebPart.manifest.json"
+        }
+      ]
+    },
+    "collaboration-org-announcement-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationOrgAnnouncement/CollaborationOrgAnnouncementWebPart.js",
+          "manifest": "./src/webparts/collaborationOrgAnnouncement/CollaborationOrgAnnouncementWebPart.manifest.json"
+        }
+      ]
+    },
+    "collaboration-media-gallery-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationMediaGallery/CollaborationMediaGalleryWebPart.js",
+          "manifest": "./src/webparts/collaborationMediaGallery/CollaborationMediaGalleryWebPart.manifest.json"
+        }
+      ]
+    },
+    "collaboration-footer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationFooter/CollaborationFooterWebPart.js",
+          "manifest": "./src/webparts/collaborationFooter/CollaborationFooterWebPart.manifest.json"
+        }
+      ]
+    },
+    "collaboration-calendar-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationCalendar/CollaborationCalendarWebPart.js",
+          "manifest": "./src/webparts/collaborationCalendar/CollaborationCalendarWebPart.manifest.json"
+        }
+      ]
+    },
+    "collaboration-directory-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/collaborationDirectory/CollaborationDirectoryWebPart.js",
+          "manifest": "./src/webparts/collaborationDirectory/CollaborationDirectoryWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -32,6 +88,14 @@
     "ProductAnniversaryWebPartStrings": "lib/webparts/productAnniversary/loc/{locale}.js",
     "CollaborationEventsWebPartStrings": "lib/webparts/collaborationEvents/loc/{locale}.js",
     "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
-    "CollaborationBannerWebPartStrings": "lib/webparts/collaborationBanner/loc/{locale}.js"
+    "CollaborationBannerWebPartStrings": "lib/webparts/collaborationBanner/loc/{locale}.js",
+    "CollaborationQuickLinksWebPartStrings": "lib/webparts/collaborationQuickLinks/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "CollaborationNewsWebPartStrings": "lib/webparts/collaborationNews/loc/{locale}.js",
+    "CollaborationOrgAnnouncementWebPartStrings": "lib/webparts/collaborationOrgAnnouncement/loc/{locale}.js",
+    "CollaborationMediaGalleryWebPartStrings": "lib/webparts/collaborationMediaGallery/loc/{locale}.js",
+    "CollaborationFooterWebPartStrings": "lib/webparts/collaborationFooter/loc/{locale}.js",
+    "CollaborationCalendarWebPartStrings": "lib/webparts/collaborationCalendar/loc/{locale}.js",
+    "CollaborationDirectoryWebPartStrings": "lib/webparts/collaborationDirectory/loc/{locale}.js"
   }
 }

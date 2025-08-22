@@ -1,0 +1,131 @@
+/* Define default values for tile sizing and colors as CSS custom properties */
+:root {
+  --tile-width: 150px; /* Matches minmax(150px, 1fr) */
+  --tile-height: 150px; /* Matches min-height: 150px */
+  --num-columns: 5; /* Default number of columns */
+  --card-color: #ffffff;
+  --text-color: #ffffff;
+  --icon-color: #ffffff;
+}
+
+.gridContainer {
+  background: var(--card-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--tile-width), 1fr)); 
+  gap: 10px;
+  padding: 10px;
+  // width: 100%;               
+  max-width: 100%;            
+  margin: 0 auto;   
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr !important; /* Stack vertically, matching other layouts */
+  }
+}
+
+.left {
+  justify-content: flex-start !important;
+}
+.center {
+  justify-content: center !important;
+}
+.right {
+  justify-content: flex-end !important;
+}
+
+
+.gridCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: var(--tile-width);
+  height: var(--tile-height);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative; /* For edit button positioning */
+  box-sizing: border-box;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: var(--card-hover-color) !important;
+  }
+
+  /* Respect inline background-color from getCardStyle */
+  &[style*="background-color"] {
+    background-color: inherit;
+  }
+
+  /* Respect inline opacity from draggedItem */
+  &[style*="opacity"] {
+    opacity: inherit;
+  }
+}
+
+.tealBackground {
+  background-color: #03787c;
+}
+
+.cyanBackground {
+  background-color: #d1ecea;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.gridIcon {
+  font-size: 40px;
+  color: var(--icon-color);
+}
+
+.cardImage {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cardTitle {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.editButton {
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--icon-color);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  &:hover {
+    color: #0078d4;
+  }
+}
+
+.cardLink {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

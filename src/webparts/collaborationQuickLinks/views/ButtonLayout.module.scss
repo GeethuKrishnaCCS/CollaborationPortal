@@ -1,0 +1,140 @@
+/* Define default values for tile sizing and colors as CSS custom properties */
+:root {
+  --tile-width: 120px;
+  --tile-height: 50px;
+  --num-columns: 5;
+  --card-color: #ffffff;
+  --text-color: #000000;
+  --icon-color: #000000;
+}
+
+.buttonLayoutContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--tile-width), 1fr));
+  gap: 10px;
+  // justify-content: center;
+  align-items: center;
+  background-color: var(--card-color);
+  padding: 10px;
+  //  width: 100%;               
+  max-width: 100%;            
+  margin: 0 auto;   
+  border-radius: 20px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr !important; 
+  }
+}
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.buttonLayoutItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Default for items with icons */
+  color: var(--text-color);
+  padding: 12px 20px;
+  border-radius: 50px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  height: var(--tile-height);
+  width: var(--tile-width);
+  box-sizing: border-box;
+  position: relative;
+
+ &:hover {
+    background-color: var(--card-hover-color)!important;
+  }
+  /* Apply dynamic styles passed via inline CSS (e.g., from getCardStyle) */
+  // &[style*="background-color"] {
+  //   background-color: inherit;
+  // }
+
+  /* Text-only items */
+  &.textOnly {
+    justify-content: center;
+  }
+}
+
+.buttonLinkAnchor {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.buttonLinkContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.buttonIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.buttonIcon {
+  font-size: 20px;
+  color: var(--icon-color);
+}
+
+.buttonImageIcon {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: transparent;
+  margin-right: 8px;
+}
+
+.linkIconContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.buttonTextLabel {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100px;
+}
+
+.editButton {
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--icon-color);
+
+  &:hover {
+    color: #0078d4;
+  }
+}

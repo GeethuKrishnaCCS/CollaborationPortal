@@ -1,0 +1,48 @@
+.mediaListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mediaList {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        overflow: auto;
+    }
+}
+
+.prevButton,
+.nextButton {
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 100%;
+    color: "[theme:themePrimary , default: #0071CE]";
+
+    @media (max-width: 1080px) {
+        position: relative;
+    }
+}
+
+.prevButton {
+    top: 0px;
+}
+
+.nextButton {
+    bottom: 0px;
+}
+
+.prevButton:disabled,
+.nextButton:disabled {
+    display: none;
+    cursor: not-allowed;
+}

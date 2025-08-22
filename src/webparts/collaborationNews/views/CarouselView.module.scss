@@ -1,0 +1,71 @@
+.carouselContainer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+  }
+  
+  .carouselItem {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carouselImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .carouselContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  
+    h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  .customPrevArrow,
+  .customNextArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  .customPrevArrow {
+    left: 10px;
+  }
+  
+  .customNextArrow {
+    right: 10px;
+  }
+  
+  .customPrevArrow:hover,
+  .customNextArrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }

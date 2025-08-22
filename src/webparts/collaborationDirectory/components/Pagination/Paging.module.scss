@@ -1,0 +1,83 @@
+.paginationContainer {
+  display: flex;
+  justify-content: end;
+  margin-top: -9px;
+  margin-right: 15px;
+
+  .searchWp__paginationContainer__pagination {
+    ul {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      gap: 10px;
+
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+          background-color: #1c1c1c;
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+          transition: background-color 0.3s;
+          text-decoration: none;
+        }
+
+        a:hover {
+          background-color: #C464EC; ;
+        }
+
+        // &.disabled a {
+        //   background-color: #aaa;
+        //   cursor: not-allowed;
+        // }
+      }
+
+      // ❗ Hide digits (keep only arrows)
+      li:not(:first-child):not(:last-child) {
+        display: none;
+      }
+
+      // ✅ Style active arrows (❮ and ❯) in #C4A25D with hover effect
+      li:first-child:not(.disabled) a,
+      li:last-child:not(.disabled) a {
+        background-color:  #C464EC;
+
+        color:#fff;
+
+        &:hover {
+          background-color: #2D033B;
+
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// General styles
+.inactive {
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: #FFD700 !important;
+  color: #000 !important;
+  border-radius: 10px;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

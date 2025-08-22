@@ -1,1 +1,1 @@
-export * from "./IEtihadBannerProps";
+export * from "./ICollaborationBannerProps";
